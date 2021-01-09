@@ -22,7 +22,7 @@
                 </tr>
                 <tr>
                     <th><?= __('Default Front Sprite Url') ?></th>
-                    <td><?= h($pokemon->default_front_sprite_url) ?></td>/
+                    <td><?= h($pokemon->default_front_sprite_url) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>
