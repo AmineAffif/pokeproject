@@ -83,13 +83,13 @@ Rappelez vous que si vous recherchez le bon mot clé, vous trouverez.
 
 L'url `localhost/` doit pointer vers `localhol/pokemons` mais le navigateur doit toujours afficher `localhost/`
 
-### Charger la totalité des pokemons dans la base de données
+### ✅ Charger la totalité des pokemons dans la base de données
 
 Actuelement, seul 251 pokemons sont présent en base de données.
 
 Modifiez le script pour faire en sorte de charger toutes les générations. (Oui, même les générations qui sont décevante ...)
 
-### Données manquantes
+### ✅ Données manquantes
 
 Lors de l'import des données depuis la PokeApi, certaines données ont été oublié et ne sont pas en base de données.
 
