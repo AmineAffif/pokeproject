@@ -14,6 +14,7 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="pokemons view content">
+            <!--
             <h3><?= h($pokemon->name) ?></h3>
             <table>
                 <tr>
@@ -23,6 +24,7 @@
                 <tr>
                     <th><?= __('Default Front Sprite Url') ?></th>
                     <td><?= h($pokemon->default_front_sprite_url) ?></td>
+                    <?= $a = h($pokemon->default_front_sprite_url) ?>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>
@@ -49,6 +51,58 @@
                     <td><?= h($pokemon->modified) ?></td>
                 </tr>
             </table>
+            !-->
+
+            <div class="col-12 col-md-4 col-sm-6 col-xs-12">
+                <figure class="card card--<?= $pokemon->first_type ?>">
+                    <div class="card__image-container poke-sprite-<?= $pokemon->pokedex_number ?>" id="main-poke-sprites">
+                        <?= $this->Html->image($pokemon->main_sprite); ?>
+                    </div>
+
+                    <figcaption class="card__caption">
+                        <h1 class="card__name"><?= $pokemon->name ?></h1>
+
+                        <h3 class="card__type <?= $pokemon->first_type ?>"">
+                        <?= $pokemon->first_type ?>
+                        </h3>
+
+                        <?php if ($pokemon->has_second_type) : ?>
+                            <h3 class="card__second_type <?= $pokemon->second_type ?>">
+                                <?= $pokemon->second_type ?>
+                            </h3>
+                        <?php endif ?>
+
+                        <table class="card__stats">
+                            <tbody>
+                            <tr>
+                                <th>Height</th>
+                                <td><?= $pokemon->height ?></td>
+                            </tr>
+                            <tr>
+                                <th>Weight</th>
+                                <td><?= $pokemon->weight ?></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <?= $this->Html->link('<i class="fas fa-eye"></i>', ['action' => 'view', $pokemon->id], ['escape' => false, 'class' => 'btn btn-sm btn-info', 'title' => __('Voir')]) ?>
+                            <?= $this->Form->postLink('<i class="fas fa-trash"></i>', ['action' => 'delete', $pokemon->id], ['confirm' => __('Are you sure you want to delete # {0}?', $pokemon->name), 'escape' => false, 'class' => 'btn btn-sm', 'title' => __('Supprimer')]) ?>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+            <div>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>HP : </th>
+                        <td><?= $pokemon->hp ?></td>
+                        <td><?= $pokemon->attack ?></td>
+                        <td><?= $pokemon->speed ?></td>
+                    </tr>
+                </table>
+
+            </div>
+
             <div class="related">
                 <h4><?= __('Related Pokemon Stats') ?></h4>
                 <?php if (!empty($pokemon->pokemon_stats)) : ?>

@@ -90,25 +90,25 @@ class PokemonsTable extends Table
             ->scalar('default_front_sprite_url')
             ->maxLength('default_front_sprite_url', 255)
             ->requirePresence('default_front_sprite_url', 'create')
-            ->notEmptyString('default_front_sprite_url');
+            ->allowEmptyString('default_front_sprite_url');
 
         $validator
             ->scalar('default_back_sprite_url')
             ->maxLength('default_back_sprite_url', 255)
             ->requirePresence('default_back_sprite_url', 'create')
-            ->notEmptyString('default_back_sprite_url');
+            ->allowEmptyString('default_back_sprite_url');
 
         $validator
             ->scalar('front_shiny_sprite_url')
             ->maxLength('front_shiny_sprite_url', 255)
             ->requirePresence('front_shiny_sprite_url', 'create')
-            ->notEmptyString('front_shiny_sprite_url');
+            ->allowEmptyString('front_shiny_sprite_url');
 
         $validator
             ->scalar('back_shiny_sprite_url')
             ->maxLength('back_shiny_sprite_url', 255)
             ->requirePresence('back_shiny_sprite_url', 'create')
-            ->notEmptyString('back_shiny_sprite_url');
+            ->allowEmptyString('back_shiny_sprite_url');
 
         return $validator;
     }
@@ -137,6 +137,13 @@ class PokemonsTable extends Table
             'weight' => $pokeApiData['weight'],
             'pokemon_stats' => $pokemonStats,
             'pokemon_types' => $pokemonTypes,
+
+            'hp' => $pokeApiData['stats'][0]['base_stat'],
+            'defense' => $pokeApiData['stats'][2]['base_stat'],
+            'attack' => $pokeApiData['stats'][1]['base_stat'],
+            'special_attack' => $pokeApiData['stats'][3]['base_stat'],
+            'special_defense' => $pokeApiData['stats'][4]['base_stat'],
+            'speed' => $pokeApiData['stats'][5]['base_stat'],
         ];
     }
 }

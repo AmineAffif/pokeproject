@@ -44,6 +44,7 @@ class PokemonsController extends AppController
         $this->set(compact('pokemon'));
     }
 
+
     /**
      * Delete method
      *

@@ -11,6 +11,12 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string $name
  * @property int $height
+ * @property int $hp
+ * @property int $speed
+ * @property int $attack
+ * @property int $defense
+ * @property int $special_defense
+ * @property int $special_attack
  * @property int $weight
  * @property string $default_front_sprite_url
  * @property \Cake\I18n\FrozenTime $created
@@ -45,6 +51,7 @@ class Pokemon extends Entity
     {
         return $this->default_front_sprite_url ? $this->default_front_sprite_url : 'unknown.png';
     }
+
 
     /**
      * Return the first type for a pokemon
