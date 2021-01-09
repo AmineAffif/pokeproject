@@ -32,20 +32,20 @@ class PokeApiShell extends Shell
     {
         $this->verbose('Loading the 1st generation !');
         $this->_loadGeneration(1, 151);
-//        $this->verbose('Loading the 2nd generation !');
-//        $this->_loadGeneration(152, 251);
-//        $this->verbose('Loading the 3rd generation !');
-//        $this->_loadGeneration(252, 386);
-//        $this->verbose('Loading the 4th generation !');
-//        $this->_loadGeneration(387, 493);
-//        $this->verbose('Loading the 5th generation !');
-//        $this->_loadGeneration(492, 649);
-//        $this->verbose('Loading the 6th generation !');
-//        $this->_loadGeneration(650, 721);
-//        $this->verbose('Loading the 7th generation !');
-//        $this->_loadGeneration(722, 809);
-//        $this->verbose('Loading the 8th generation !');
-//        $this->_loadGeneration(810, 898);
+        $this->verbose('Loading the 2nd generation !');
+        $this->_loadGeneration(152, 251);
+        $this->verbose('Loading the 3rd generation !');
+        $this->_loadGeneration(252, 386);
+        $this->verbose('Loading the 4th generation !');
+        $this->_loadGeneration(387, 493);
+        $this->verbose('Loading the 5th generation !');
+        $this->_loadGeneration(492, 649);
+        $this->verbose('Loading the 6th generation !');
+        $this->_loadGeneration(650, 721);
+        $this->verbose('Loading the 7th generation !');
+        $this->_loadGeneration(722, 809);
+        $this->verbose('Loading the 8th generation !');
+        $this->_loadGeneration(810, 898);
     }
 
     /**
