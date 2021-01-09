@@ -79,7 +79,7 @@ Le projet est une solution Open Source avec de très nombreuses page de document
 
 Rappelez vous que si vous recherchez le bon mot clé, vous trouverez.
 
-### Modifier la page d'acceuil de l'application
+### ✅ Modifier la page d'acceuil de l'application
 
 L'url `localhost/` doit pointer vers `localhol/pokemons` mais le navigateur doit toujours afficher `localhost/`
 
