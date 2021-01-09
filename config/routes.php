@@ -60,7 +60,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
     /*
      * ...and connect the rest of 'Pages' controller's URLs.
      */
-    $builder->connect('/pokemons/*', 'Pokemons::index');
+    $builder->connect('/pages/*', 'Pages::index');
 
     /*
      * Connect catchall routes for all controllers.
