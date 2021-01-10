@@ -37,11 +37,7 @@ class PokemonsController extends AppController
      */
     public function view($id = null)
     {
-        $pokemon = $this->Pokemons->get($id, [
-            'contain' => ['PokemonStats.Stats', 'PokemonTypes.Types'],
-        ]);
 
-        $this->set(compact('pokemon'));
     }
 
 
