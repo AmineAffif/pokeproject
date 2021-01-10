@@ -56,7 +56,10 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * to use (in this case, templates/Pages/home.php)...
      */
     $builder->connect('/', ['controller' => 'Pokemons', 'action' => 'index', 'home']);
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of b2efb8c... trying to add dashboard page but it doesn't work, I'm going to revert
 
     /*
      * ...and connect the rest of 'Pages' controller's URLs.

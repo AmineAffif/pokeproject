@@ -166,4 +166,7 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of b2efb8c... trying to add dashboard page but it doesn't work, I'm going to revert
