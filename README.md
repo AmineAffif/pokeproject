@@ -95,7 +95,7 @@ Lors de l'import des données depuis la PokeApi, certaines données ont été ou
 
 Faites en sorte de récuperer l'image de face, l'image de dos et l'image Shiny de chaque pokemon.
 
-### Intégration de la maquette
+### 👨‍💻 Intégration de la maquette
 
 Le client nous à fait parvenir plusieurs maquettes pour l'affichage des information d'un pokemon.
 
@@ -117,7 +117,7 @@ Le client souhaiterais avoir un tableau de bord afin d'y afficher des statistiqu
 
 Vous devrez donc créer un tableau de bord (Et mettre en place un lien vers celui ci dans le menu) et y afficher les données suivante :
 
--   Poids moyen des pokemons de la 4éme génération
+-   ✅ Poids moyen des pokemons de la 4éme génération
 -   Nombre de pokemons de type fée entre les générations 1, 3 et 7.
 -   Afficher les 10 premier pokemons qui possède la plus grande vitesse
 
