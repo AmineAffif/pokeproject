@@ -7836,7 +7836,7 @@ div.snorlax {
   .card:nth-child(1) {
     transform: translateY(0px) rotate(2deg); }
   .card:nth-child(2) {
-    transform: translateY(0px) rotate(-2deg); }
+    transform: translateY(0px) rotate(0deg); }
   .card:nth-child(3) {
     transform: translateY(0px) rotate(4deg); }
   .card:nth-child(4) {
@@ -7905,3 +7905,398 @@ h5 {
 
 
 
+th {
+    padding: 10px !important;
+}
+td {
+    padding: 10px !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+.c2{
+    padding: 0;
+    width: 250px;
+    background: none;
+    box-shadow: none;
+    border: none;
+    margin-bottom: 30px;
+}
+.spTitle{
+    margin-left: 15px;
+}
+
+
+
+
+/*-------------------- Pokemon Card BASIC --------------------*/
+
+.card2 {
+    width:300px;
+    display:inline-block;
+    background:url(https://picsum.photos/id/1074/800/800) center/cover;
+    -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 64 78' ><path d='M0 39 C0 61 8 78 32 78 C56 78 64 61 64 39 C64 19 56 0 32 0 C8 0 0 19 0 39 Z' /></svg>") 0 / 100% 100%;
+    mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 64 78' ><path d='M0 39 C0 61 8 78 32 78 C56 78 64 61 64 39 C64 19 56 0 32 0 C8 0 0 19 0 39 Z' /></svg>") 0 / 100% 100%;
+}
+.card2::before {
+    content:"";
+    display:block;
+    padding-top:121%;
+}
+.card2 {
+    width: 320px;
+    height: 452px;
+
+    /*background-image: url(https://images.pokemontcg.io/xy2/12_hires.png);*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: -3px -3px 3px 0 rgba(38, 230, 247, 0.6), 3px 3px 3px 0 rgba(247, 89, 228, 0.6), 0 0 6px 2px rgba(255, 231, 89, 0.6), 0 35px 25px -15px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 20px 10px;
+    -webkit-animation: holoCard 15s ease infinite;
+    animation: holoCard 15s ease infinite;
+}
+
+.card2 > span {
+    position: relative;
+    top: 45%;
+}
+
+.card2:before,
+.card2:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: linear-gradient(115deg, transparent 0%, #00e7ff 30%, #ff00e7 70%, transparent 100%);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 300% 300%;
+    mix-blend-mode: color-dodge;
+    opacity: 0.2;
+    z-index: 1;
+    -webkit-animation: holoGradient 15s ease infinite;
+    animation: holoGradient 15s ease infinite;
+}
+
+.card2:after {
+    background-image: url("https://www.thefencingwarehouse.com.au/assets/alt_1/P50X30BL.jpg?20200703030919");
+    background-position: center;
+    background-size: 180%;
+    mix-blend-mode: color-dodge;
+    opacity: 1;
+    z-index: 2;
+    -webkit-animation: holoSparkle 15s ease infinite;
+    animation: holoSparkle 15s ease infinite;
+}
+
+
+.card2.active:before {
+    opacity: 1;
+    -webkit-animation: none;
+    animation: none;
+    transition: none;
+    background-image: linear-gradient(115deg, transparent 0%, transparent 25%, rgba(0, 231, 255, 0.7) 45%, rgba(255, 0, 231, 0.7) 55%, transparent 70%, transparent 100%);
+}
+
+.card2.active:before,
+.card2.active:after {
+    -webkit-animation: none;
+    animation: none;
+}
+
+.card2:nth-of-type(1),
+.card2:nth-of-type(2),
+.card2:nth-of-type(3) {
+    width: 160px;
+    height: 226px;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.4), 0 25px 15px -10px rgba(31, 31, 31, 0.5);
+}
+
+.card2:nth-of-type(1):before, .card2:nth-of-type(1):after,
+.card2:nth-of-type(2):before,
+.card2:nth-of-type(2):after,
+.card2:nth-of-type(3):before,
+.card2:nth-of-type(3):after {
+    -webkit-animation: none;
+    animation: none;
+    opacity: 1;
+}
+
+.card2:nth-of-type(1):before, .card2:nth-of-type(1):after {
+    display: none;
+}
+
+.card2:nth-of-type(2) {
+    background: none;
+}
+.card2:nth-of-type(2):before {
+    display: none;
+}
+
+.card2:nth-of-type(3) {
+    background: none;
+}
+.card2:nth-of-type(3):before {
+    background-position: center;
+}
+.card2:nth-of-type(3):after {
+    display: none;
+}
+
+.operator {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 45px;
+}
+
+@-webkit-keyframes holoSparkle {
+    0%, 5% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+@keyframes holoSparkle {
+    0%, 5% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+@-webkit-keyframes holoCard {
+    0%, 10% {
+        transform: rotate3d(0, 0, 0, -10deg);
+    }
+    20% {
+        transform: rotate3d(1, 1, 0.2, 20deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 0, -10deg);
+    }
+}
+@keyframes holoCard {
+    0%, 10% {
+        transform: rotate3d(0, 0, 0, -10deg);
+    }
+    20% {
+        transform: rotate3d(1, 1, 0.2, 20deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 0, -10deg);
+    }
+}
+.noneD {
+    display: none;
+}
+
+
+
+/*-------------------- Pokemon Card SHINY --------------------*/
+
+.card3 {
+    width:300px;
+    display:inline-block;
+    background:url(https://picsum.photos/id/1074/800/800) center/cover;
+    -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 64 78' ><path d='M0 39 C0 61 8 78 32 78 C56 78 64 61 64 39 C64 19 56 0 32 0 C8 0 0 19 0 39 Z' /></svg>") 0 / 100% 100%;
+    mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 64 78' ><path d='M0 39 C0 61 8 78 32 78 C56 78 64 61 64 39 C64 19 56 0 32 0 C8 0 0 19 0 39 Z' /></svg>") 0 / 100% 100%;
+}
+.card3::before {
+    content:"";
+    display:block;
+    padding-top:121%;
+}
+.card3 {
+    width: 320px;
+    height: 452px;
+    /*background-image: url(https://images.pokemontcg.io/xy2/12_hires.png);*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: -3px -3px 3px 0 rgba(38, 230, 247, 0.6), 3px 3px 3px 0 rgba(247, 89, 228, 0.6), 0 0 6px 2px rgba(255, 231, 89, 0.6), 0 35px 25px -15px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 20px 10px;
+    -webkit-animation: holoCard 15s ease infinite;
+    animation: holoCard 15s ease infinite;
+}
+
+.card3 > span {
+    position: relative;
+    top: 45%;
+}
+
+.card3:before,
+.card3:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: linear-gradient(115deg, transparent 0%, #00e7ff 30%, #ff00e7 70%, transparent 100%);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 300% 300%;
+    mix-blend-mode: color-dodge;
+    opacity: 0.2;
+    z-index: 1;
+    -webkit-animation: holoGradient 15s ease infinite;
+    animation: holoGradient 15s ease infinite;
+}
+
+.card3:after {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
+    background-position: center;
+    background-size: 180%;
+    mix-blend-mode: color-dodge;
+    opacity: 1;
+    z-index: 2;
+    -webkit-animation: holoSparkle 15s ease infinite;
+    animation: holoSparkle 15s ease infinite;
+}
+
+
+.card3.active:before {
+    opacity: 1;
+    -webkit-animation: none;
+    animation: none;
+    transition: none;
+    background-image: linear-gradient(115deg, transparent 0%, transparent 25%, rgba(0, 231, 255, 0.7) 45%, rgba(255, 0, 231, 0.7) 55%, transparent 70%, transparent 100%);
+}
+
+.card3.active:before,
+.card3.active:after {
+    -webkit-animation: none;
+    animation: none;
+}
+
+.card3:nth-of-type(1),
+.card3:nth-of-type(2),
+.card3:nth-of-type(3) {
+    width: 160px;
+    height: 226px;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.4), 0 25px 15px -10px rgba(31, 31, 31, 0.5);
+}
+
+.card3:nth-of-type(1):before, .card3:nth-of-type(1):after,
+.card3:nth-of-type(2):before,
+.card3:nth-of-type(2):after,
+.card3:nth-of-type(3):before,
+.card3:nth-of-type(3):after {
+    -webkit-animation: none;
+    animation: none;
+    opacity: 1;
+}
+
+.card3:nth-of-type(1):before, .card3:nth-of-type(1):after {
+    display: none;
+}
+
+.card3:nth-of-type(2) {
+    background: none;
+}
+.card3:nth-of-type(2):before {
+    display: none;
+}
+
+.card3:nth-of-type(3) {
+    background: none;
+}
+.card3:nth-of-type(3):before {
+    background-position: center;
+}
+.card3:nth-of-type(3):after {
+    display: none;
+}
+
+.operator {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 45px;
+}
+
+@-webkit-keyframes holoSparkle {
+    0%, 5% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+@keyframes holoSparkle {
+    0%, 5% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+@-webkit-keyframes holoCard {
+    0%, 10% {
+        transform: rotate3d(0, 0, 0, -10deg);
+    }
+    20% {
+        transform: rotate3d(1, 1, 0.2, 20deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 0, -10deg);
+    }
+}
+@keyframes holoCard {
+    0%, 10% {
+        transform: rotate3d(0, 0, 0, -10deg);
+    }
+    20% {
+        transform: rotate3d(1, 1, 0.2, 20deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 0, -10deg);
+    }
+}
+.noneD {
+    display: none;
+}
+
+
+
+
+
+
+
+
+.firstRow {
+    display: flex;
+    align-items: center;
+  }
+
+
+.secondRow .card2, .secondRow .card3{
+    margin: 0;
+}
