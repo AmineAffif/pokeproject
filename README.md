@@ -1,7 +1,7 @@
 # Projet Web Iut Info module Web 2020
 
 
-- Groupe N°4 :
+- Groupe N°4
 - Affif Amine
 
 
@@ -46,29 +46,6 @@ L'option -v permet d'afficher les messages de progression et/ou d'erreur.
 
 **Félicitations ! A ce stade, vous avez 4/20**
 
-## Gestion de projet
-
-Ce projet peut être fait en groupe. Pas plus de 4 personnes par groupe, nous savons tous comment ça se passe quand on est trop nombreux.
-
-Des groupes de une personne ça fonctionne aussi..
-
-**Les groupes devront être formé avant le lundi 14/12/2020 à 21h38.**
-
-Dés que vous aurez récupérer le projet, la premiere étape que vous devez faire (avant même la configuration de votre BDD), c'est de créer un repository Git.
-
-Je vous invite a mettre ce repo en privé invitez ensuite vos camarades à participer à ce repo.
-
-Vous devrez également m'ajouter à ce repo en m'invitant avec l'adresse : maxime@iteracode.fr
-
-J'accorderais 4 points supplémentaire sur votre gestion de projet.
-
--   Est-ce que vous savez travailler en groupe ?
--   Est-ce que vous avez fait des branches ? Des commits pour chaque features ?
--   Est-ce que vos noms de branche et/ou de commits sont explicite ?
--   etc ..
-
-Sachez également qu'il existe des outils pour comparer des repo entre eux et que j'aurais accès aux repo de vos camarades :)
-
 ## Demandes du client
 
 Dans cette application, vous devrez répondre aux différents besoin du client.
@@ -95,7 +72,7 @@ Lors de l'import des données depuis la PokeApi, certaines données ont été ou
 
 Faites en sorte de récuperer l'image de face, l'image de dos et l'image Shiny de chaque pokemon.
 
-### 👨‍💻 Intégration de la maquette
+### ✅ Intégration de la maquette
 
 Le client nous à fait parvenir plusieurs maquettes pour l'affichage des information d'un pokemon.
 
@@ -104,10 +81,9 @@ Intégrez la maquette sur la page permettant de `visualiser` les données d'un p
 Attention, le client souhaiterais faire du A/B Testing avec ses utilisateurs.
 
 Les groupes 1, 3 et 5 devrons intégrer cette maquette.
-![groupes 1, 3 et 5](./Maquette135.png)
+![groupes 1, 3 et 5](./Maquette135.jpg)
 
-Les groupes 2 et 4 devrons intégrer cette maquette.
-![groupes 2 et 4](./Maquette24.png)
+
 
 La couleur et les choix artistiques vous appartiennent !
 
@@ -118,19 +94,9 @@ Le client souhaiterais avoir un tableau de bord afin d'y afficher des statistiqu
 Vous devrez donc créer un tableau de bord (Et mettre en place un lien vers celui ci dans le menu) et y afficher les données suivante :
 
 -   ✅ Poids moyen des pokemons de la 4éme génération
--   Nombre de pokemons de type fée entre les générations 1, 3 et 7.
--   Afficher les 10 premier pokemons qui possède la plus grande vitesse
-
-## Les conseils de dernières minutes
-
-Parcourez l'application, vous découvrirez sont fonctionnement et peut être que certain bout de code pourrons vous aider.
-
-Utilisez la debug bar !
-
-La documentation est votre amie ! Lisez là .. Google est également jamais très loin pour vous donner des informations également.
-
-Avant de jouer avec l'ORM pour faire des requettes, rappelez vous ce qu'on à rapidement vue en cours : les fonctions de l'orm pour créer des requettes ressemble au final beaucoup à du SQL.
-Donc avant de faire du PHP, faites le en SQL et exécutez vos requettes directement depuis votre PhpMyAdmin.
+-   ✅ Nombre de pokemons de type fée entre les générations 1, 3 et 7.
+-   ✅ Afficher les 10 premier pokemons qui possède la plus grande vitesse
+ du PHP, faites le en SQL et exécutez vos requettes directement depuis votre PhpMyAdmin.
 
 ## Liens utiles
 
@@ -139,4 +105,3 @@ PokeApi : https://pokeapi.co/api/v2/pokemon/25
 CakePhp CookBook : https://book.cakephp.org/4/en/index.html
 
 Discord : https://discord.gg/dJkXDdzF6G
-# poke-project

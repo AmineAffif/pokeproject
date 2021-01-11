@@ -8294,11 +8294,19 @@ td {
 .firstRow {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 
 .secondRow .card2, .secondRow .card3{
-    margin: 0;
+    height: 220px;
+    margin: 20px;
+    width: 200px;
+}
+.secondRow{
+    display: flex;
+    justify-content: center;
+    padding: 60px !important;
 }
 
 

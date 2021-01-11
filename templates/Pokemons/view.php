@@ -21,65 +21,20 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="pokemons view content">
-            <!--
-            <h3><?= h($pokemon->name) ?></h3>
-            <table>
-                <tr>
-                    <th><?= __('Name') ?></th>
-                    <td><?= h($pokemon->name) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Default Front Sprite Url') ?></th>
-                    <td><?= h($pokemon->default_front_sprite_url) ?></td>
-                    <?= $a = h($pokemon->default_front_sprite_url) ?>
-                </tr>
-                <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($pokemon->id) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Height') ?></th>
-                    <td><?= $this->Number->format($pokemon->height) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Weight') ?></th>
-                    <td><?= $this->Number->format($pokemon->weight) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Pokedex Number') ?></th>
-                    <td><?= $this->Number->format($pokemon->pokedex_number) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Created') ?></th>
-                    <td><?= h($pokemon->created) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Modified') ?></th>
-                    <td><?= h($pokemon->modified) ?></td>
-                </tr>
-            </table>
-            !-->
+
             <div class="container">
                 <div class="row firstRow">
                     <div class="col-sm">
                         <div>
-
-
                             <!--BASIC CARD-->
                             <div class="card2 noneD"></div>
                             <div class="card2 noneD"></div>
                             <div class="card2 noneD"></div>
                             <div class="card2" style="background-image: url(<?= $pokemon->default_front_sprite_url; ?>)"></div>
-
                         </div>
-
                     </div>
-
                     <div class="col-sm">
                         <div>
-
-
-
                             <h3 class="spTitle"><?= ucfirst($pokemon->name) ?></h3>
                             <div class="card c2">
                                 <h3 class="card__type <?= $pokemon->first_type ?>">
@@ -91,14 +46,9 @@
                                         <?= $pokemon->second_type ?>
                                     </h3>
                                 <?php endif ?>
-
-
                         </div>
-
-
             </div>
             <div>
-
                 <table class="table table-bordered">
                     <tr>
                         <th>HP</th>
