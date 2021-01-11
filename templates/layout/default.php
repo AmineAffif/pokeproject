@@ -29,7 +29,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7418e7179d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/jquery.hislide.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <?= $this->Html->css(['style', 'milligram.min', 'cake', 'style']) ?>
 
     <?= $this->fetch('meta') ?>
@@ -77,5 +80,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </div>
     </div>
     </footer>
+    <script type="text/javascript" src="libs/jquery.js" ></script>
+    <!-- 页面底部引入jquery.hislide.js，再此之前请确保正确引入了jquery! -->
+    <script type="text/javascript" src="js/jquery.hislide.js" ></script>
 </body>
 </html>
