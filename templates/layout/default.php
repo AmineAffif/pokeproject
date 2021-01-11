@@ -29,6 +29,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7418e7179d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <?= $this->Html->css(['style', 'milligram.min', 'cake', 'style']) ?>
 
     <?= $this->fetch('meta') ?>

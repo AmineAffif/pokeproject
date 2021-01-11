@@ -7,9 +7,16 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
+
             <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(__('Delete Pokemon'), ['action' => 'delete', $pokemon->id], ['confirm' => __('Are you sure you want to delete # {0}?', $pokemon->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Pokemons'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <div class="dashboard_btn_container" style="display:inline-block;margin-right:20px;">
+                <?php echo $this->Html->link(" ", array('controller' => 'Dashboard','action'=> 'index'), array( 'class' => 'fa fa-dashboard', 'style' => 'font-size:1.5em;color:purple;' )) ?>
+                <?php echo $this->Html->link("Dashboard ", array('controller' => 'Dashboard','action'=> 'index'), array( 'class' => 'button-dashboard')) ?>
+            </div>
+            <?= $this->Html->link(__('List Pokemons'), ['action' => 'index'], ['class' => 'side-nav-item', 'style' => 'display:inline-block;margin-right:20px']) ?>
+            <?= $this->Form->postLink(__('Delete Pokemon'), ['action' => 'delete', $pokemon->id], ['confirm' => __('Are you sure you want to delete # {0}?', $pokemon->id), 'class' => 'side-nav-item', 'style' => 'display:inline-block;']) ?>
+
+
         </div>
     </aside>
     <div class="column-responsive column-80">
@@ -163,7 +170,7 @@
 
 
 
-        
+
         </div>
     </div>
 </div>
