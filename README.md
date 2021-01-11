@@ -81,7 +81,7 @@ Intégrez la maquette sur la page permettant de `visualiser` les données d'un p
 Attention, le client souhaiterais faire du A/B Testing avec ses utilisateurs.
 
 Les groupes 1, 3 et 5 devrons intégrer cette maquette.
-![groupes 1, 3 et 5](./maquette135.JPG)
+![groupes 1, 3 et 5](./maquette136.JPG)
 
 
 ### Tableau de bord et Statistiques
