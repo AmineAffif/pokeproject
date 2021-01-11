@@ -6,7 +6,10 @@
 ?>
 <div class="pokemons index content">
     <h3><?= __('Pokemons') ?></h3>
-
+    <div class="dashboard_btn_container" style="display:inline-block;margin-right:20px;">
+        <?php echo $this->Html->link(" ", array('controller' => 'Dashboard','action'=> 'index'), array( 'class' => 'fa fa-dashboard', 'style' => 'font-size:1.5em;color:purple;' )) ?>
+        <?php echo $this->Html->link("Dashboard ", array('controller' => 'Dashboard','action'=> 'index'), array( 'class' => 'button-dashboard')) ?>
+    </div>
     <div class="row">
         <?php foreach ($pokemons as $pokemon) : ?>
                 <div class="col-12 col-md-4 col-sm-6 col-xs-12">
