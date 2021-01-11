@@ -15,8 +15,6 @@
             </div>
             <?= $this->Html->link(__('List Pokemons'), ['action' => 'index'], ['class' => 'side-nav-item', 'style' => 'display:inline-block;margin-right:20px']) ?>
             <?= $this->Form->postLink(__('Delete Pokemon'), ['action' => 'delete', $pokemon->id], ['confirm' => __('Are you sure you want to delete # {0}?', $pokemon->id), 'class' => 'side-nav-item', 'style' => 'display:inline-block;']) ?>
-
-
         </div>
     </aside>
     <div class="column-responsive column-80">
@@ -113,14 +111,8 @@
                             <div class="card3 noneD"></div>
                             <div class="card3" style="background-image: url(<?= $pokemon->front_shiny_sprite_url; ?>)"></div>
                         <?php endif ?>
-
                 </div>
-
             </div>
-
-
-
-
         </div>
     </div>
 </div>
