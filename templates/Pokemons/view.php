@@ -4,6 +4,11 @@
  * @var \App\Model\Entity\Pokemon $pokemon
  */
 ?>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
 <div class="row">
     <aside class="column">
         <div class="side-nav">
@@ -17,13 +22,13 @@
             <?= $this->Form->postLink(__('Delete Pokemon'), ['action' => 'delete', $pokemon->id], ['confirm' => __('Are you sure you want to delete # {0}?', $pokemon->id), 'class' => 'side-nav-item', 'style' => 'display:inline-block;']) ?>
         </div>
     </aside>
-    <div class="column-responsive column-80">
+    <div class="column-responsive column-100">
         <div class="pokemons view content">
 
             <div class="container">
                 <div class="row firstRow">
                     <div class="col-sm">
-                        <div>
+                        <div style="display: flex; justify-content: center">
                             <!--BASIC CARD-->
                             <div class="card2 noneD"></div>
                             <div class="card2 noneD"></div>
@@ -74,17 +79,14 @@
                     </tr>
                 </table>
 
-            </div>
+                  </div>
+                 </div>
                 </div>
-            </div>
 
+                <div class="row" style="display: flex; justify-content: center">
 
-                </div>
-            <div class="row secondRow">
-                <div style="margin: 40px;"></div>
-                <div class="container slider-ct">
-                    <div class="row slide-wr">
-                        <div class="col-sm-4 slide">
+                    <div id="carousel">
+                        <div class="item">
                             <!--IF HAS FRONT BASIC IMAGE ?-->
                             <?php if (!is_null($pokemon->default_front_sprite_url)) : ?>
                                 <!--BASIC CARD-->
@@ -94,7 +96,7 @@
                                 <div class="card2" style="background-image: url(<?= $pokemon->default_front_sprite_url; ?>)"></div>
                             <?php endif ?>
                         </div>
-                        <div class="col-sm-4 slide">
+                        <div class="item">
                             <!--IF HAS BACK BASIC IMAGE ?-->
                             <?php if (!is_null($pokemon->default_back_sprite_url)) : ?>
                                 <!--BASIC CARD-->
@@ -104,7 +106,7 @@
                                 <div class="card2" style="background-image: url(<?= $pokemon->default_back_sprite_url; ?>)"></div>
                             <?php endif ?>
                         </div>
-                        <div class="col-sm-4 slide">
+                        <div class="item">
                             <!--IF HAS FRONT SHINY IMAGE ?-->
                             <?php if (!is_null($pokemon->front_shiny_sprite_url)) : ?>
                                 <!--SHINY CARD-->
@@ -114,12 +116,13 @@
                                 <div class="card3" style="background-image: url(<?= $pokemon->front_shiny_sprite_url; ?>)"></div>
                             <?php endif ?>
                         </div>
-
                     </div>
-                    <button id="back" style="background-color: #6e16a4">&lt; </button>
-                    <button id="forward" style="background-color: #6e16a4"> &gt;</button>
+                    <button class="prev" id="prev">&#9668;</button>
+                    <button class="next" id="next">&#9658;</button>
                 </div>
-            </div>
+
+                </div>
+
             </div>
         </div>
     </div>
@@ -128,77 +131,56 @@
 
 
 
-
-
-
 <script>
-    var slider = document.querySelector(".slide-wr");
-
-    document.getElementById("back").onclick = () => {
-        const c = 33.33;
-        let left = slider.style.transform.split("%")[0].split("(")[1];
-        if (left) {
-            var num = Number(left) + Number(c);
+    var ThreeDCarousel = function(el, classname) {
+        var element = document.getElementById(el);
+        var items = element.getElementsByClassName(classname);
+        var classNames = ['two', 'three', 'one'];
+        if (items.length !== 3) {
+            alert('ThreeDCarousel only supports 3 items.');
+            return false;
         } else {
-            var num = Number(c);
-        }
-        slider.style.transform = `translateX(${num}%)`;
-
-        if (left == -166.65) {
-            slider.addEventListener("transitionend", myfunc);
-            function myfunc() {
-                this.style.transition = "none";
-                this.style.transform = `translateX(-299.97%)`;
-                slider.removeEventListener("transitionend", myfunc);
+            for (var i = 0; i < 3; i++) {
+                items[i].className += " " + classNames[i];
             }
-        } else {
-            slider.style.transition = "all 0.5s";
         }
+
+        var obj = {
+            element: element,
+            items: items,
+            prev: function() {
+                var l = this.element.getElementsByClassName('one')[0],
+                    c = this.element.getElementsByClassName('two')[0],
+                    r = this.element.getElementsByClassName('three')[0];
+                l.classList.remove('one');
+                l.classList.add('two');
+                c.classList.remove('two');
+                c.classList.add('three');
+                r.classList.remove('three');
+                r.classList.add('one');
+            },
+            next: function() {
+                var l = this.element.getElementsByClassName('one')[0],
+                    c = this.element.getElementsByClassName('two')[0],
+                    r = this.element.getElementsByClassName('three')[0];
+                l.classList.remove('one');
+                l.classList.add('three');
+                c.classList.remove('two');
+                c.classList.add('one');
+                r.classList.remove('three');
+                r.classList.add('two');
+            }
+        };
+        return obj;
     };
 
-    document.getElementById("forward").onclick = () => {
-        const c = -33.33;
-        let left = slider.style.transform.split("%")[0].split("(")[1];
-        if (left) {
-            var num = Number(left) + Number(c);
-        } else {
-            var num = Number(c);
-        }
+    var carousel = new ThreeDCarousel('carousel', 'item');
 
-        slider.style.transform = `translateX(${num}%)`;
+    var auto = setInterval(function() { carousel.next(); }, 5000);
 
-        if (left == -299.97) {
-            console.log("reached the border");
-            slider.addEventListener("transitionend", myfunc);
-            function myfunc() {
-                this.style.transition = "none";
-                this.style.transform = `translateX(-166.65%)`;
-                slider.removeEventListener("transitionend", myfunc);
-            }
-        } else {
-            slider.style.transition = "all 0.5s";
-        }
-    };
+    var next = document.getElementById('next');
+    next.onclick = carousel.next.bind(carousel);
 
-    const sliderChildren = document.getElementsByClassName("slide-wr")[0].children;
-    slider.style.transform = `translateX(${sliderChildren.length * -33.33}%)`;
-    Array.from(sliderChildren)
-        .slice()
-        .reverse()
-        .forEach((child) => {
-            let cln = child.cloneNode(true);
-            cln.classList += " cloned before";
-            slider.insertBefore(cln, sliderChildren[0]);
-        });
-
-    Array.from(sliderChildren).forEach((child) => {
-        let cln = child.cloneNode(true);
-        if (child.classList.contains("cloned") === false) {
-            cln.classList += " cloned after";
-            slider.appendChild(cln);
-        }
-    });
-
+    var prev = document.getElementById('prev');
+    prev.onclick = carousel.prev.bind(carousel);
 </script>
-
-
