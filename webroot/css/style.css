@@ -8498,3 +8498,37 @@ td {
 #next {
     margin-left: 570px;
 }
+
+/*--------------------- RESPONSIVNESS ---------------------*/
+@media only screen and (max-width: 787px) {
+    .card2 {
+        width: 320px;
+        height: 250px;
+    }
+    .card3 {
+        width: 320px;
+        height: 250px;
+    }
+    #carousel {
+        height: 350px;
+    }
+    .item {
+        height: 250px;
+    }
+    #prev {
+        margin-right: 360px;
+    }
+    #next {
+        margin-left: 360px;
+    }
+    #prev, #next {
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        font-size: 1em;
+        position: absolute;
+        margin-top: 135px;
+        padding: 0;
+
+    }
+}
