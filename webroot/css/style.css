@@ -7821,6 +7821,44 @@ div.snorlax {
     .card--grass .card__type,
     .card .grass .card__type {
       background: #6e7f0e; }
+
+.card--poison,
+.card .poison {
+    background: linear-gradient(140deg, #8064f8 0%, #360e7f 69%, #1e0950 100%); }
+
+.card--bug,
+.card .bug {
+    background: linear-gradient(140deg, #cada3d 0%, #747f0e 69%, #2d5009 100%); }
+
+.card--flying,
+.card .flying {
+    background: linear-gradient(140deg, #3ddabb 0%, #0e7f57 69%, #095025 100%); }
+
+.card--ground,
+.card .ground {
+    background: linear-gradient(140deg, #dab33d 0%, #7f5f0e 69%, #503e09 100%); }
+
+.card--fighting,
+.card .fighting {
+    background: linear-gradient(140deg, #c36631 0%, #7f320e 69%, #3e1f13 100%); }
+
+.card--rock,
+.card .rock {
+    background: linear-gradient(140deg, #fdcb68 0%, #cf9641 69%, #c35f40 100%); }
+
+.card--ghost,
+.card .ghost {
+    background: linear-gradient(140deg, #c968fd 0%, #8341cf 69%, #4940c3 100%); }
+
+.card--dragon,
+.card .dragon {
+    background: linear-gradient(140deg, #a291ff 0%, #7273ff 69%, #5d6adb 100%); }
+
+.card--steel,
+.card .steel {
+    background: linear-gradient(140deg, #ececec 0%, #8d8d8d 69%, #585858 100%); }
+
+
   .card--ice,
   .card .ice {
     background: linear-gradient(230deg, #caeaf6 0%, #a0eaf1 46%, #6fb8eb 100%); }
@@ -8532,3 +8570,52 @@ td {
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

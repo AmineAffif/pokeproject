@@ -12,7 +12,6 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-
             <h4 class="heading"><?= __('Actions') ?></h4>
             <div class="dashboard_btn_container" style="display:inline-block;margin-right:20px;">
                 <?php echo $this->Html->link(" ", array('controller' => 'Dashboard','action'=> 'index'), array( 'class' => 'fa fa-dashboard', 'style' => 'font-size:1.5em;color:purple;' )) ?>
@@ -24,7 +23,6 @@
     </aside>
     <div class="column-responsive column-100">
         <div class="pokemons view content">
-
             <div class="container">
                 <div class="row firstRow">
                     <div class="col-sm">
@@ -43,13 +41,12 @@
                                 <h3 class="card__type <?= $pokemon->first_type ?>">
                                     <?= $pokemon->first_type ?>
                                 </h3>
-
                                 <?php if ($pokemon->has_second_type) : ?>
                                     <h3 class="card__second_type <?= $pokemon->second_type ?>">
                                         <?= $pokemon->second_type ?>
                                     </h3>
                                 <?php endif ?>
-                        </div>
+                            </div>
             </div>
             <div>
                 <table class="table table-bordered">
@@ -78,13 +75,10 @@
                         <td><?= $pokemon->speed ?></td>
                     </tr>
                 </table>
-
                   </div>
                  </div>
                 </div>
-
                 <div class="row" style="display: flex; justify-content: center">
-
                     <div id="carousel">
                         <div class="item">
                             <!--IF HAS FRONT BASIC IMAGE ?-->
@@ -120,17 +114,13 @@
                     <button class="prev" id="prev">&#9668;</button>
                     <button class="next" id="next">&#9658;</button>
                 </div>
-
                 </div>
-
             </div>
         </div>
     </div>
 </div>
 
-
-
-
+<!--Script for the carousel-->
 <script>
     var ThreeDCarousel = function(el, classname) {
         var element = document.getElementById(el);

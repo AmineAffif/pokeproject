@@ -13,7 +13,6 @@
  */
 ?>
 
-
 <div class="container2">
     <div class="container-top2">
         <!--AVG Weight-->
