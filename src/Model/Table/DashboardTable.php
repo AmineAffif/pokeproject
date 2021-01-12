@@ -45,9 +45,7 @@ class DashboardTable extends Table
         $this->setTable('pokemons');
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
-
         $this->addBehavior('Timestamp');
-
         $this->hasMany('PokemonStats', [
             'foreignKey' => 'pokemon_id',
             'saveStrategy' => 'replace',

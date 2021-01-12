@@ -28,12 +28,10 @@
     </div>
 </div>
 
-
 <!--TOP 10-->
 <div class="container2">
     <div class="container-top2">
         <h2 style="margin-top: 30px;text-decoration: underline">Top 10 des Pokémon les plus rapides :</h2>
-
         <div class="divTable">
             <div class="divTableBody">
                 <div class="divTableRow">
@@ -54,7 +52,5 @@
                 <?php endforeach; ?>
             </div>
         </div>
-
-
     </div>
 </div>

@@ -12,7 +12,6 @@ use Cake\ORM\Entity;
  * @property string $pokemon_id
  * @property string $stat_id
  * @property int $value
- *
  * @property \App\Model\Entity\Pokemon $pokemon
  * @property \App\Model\Entity\Stat $stat
  */

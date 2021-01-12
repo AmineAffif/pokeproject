@@ -129,9 +129,6 @@ class DashboardController extends AppController
         $pattern = "/[\s]/";
         foreach ($reversed as $row => $value){
             $speedNameTab[] = preg_split($pattern, $value);
-//            echo '<pre>';
-//            print_r($speedNameTab[$row]);
-//            echo '</pre>';
         }
 
         //display Final array with speed for each pokemon sorted
@@ -142,11 +139,7 @@ class DashboardController extends AppController
 //        }
 
 
-
-
-
-
-//      Walking Backwards in the speed sorted pokemons array
+        //Walking Backwards in the speed sorted pokemons array
         $index = count($pokemonSortedSpeed);
 
 //      displaying $pokemonSortedSpeed array backwards With while loop
@@ -170,11 +163,6 @@ class DashboardController extends AppController
 //            $reversed[] = $pokemonSortedSpeed[--$index];
 //        }
 //        var_dump($reversed);
-
-
-
-
-
 
 
         $this->set(compact('row',
