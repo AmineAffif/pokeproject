@@ -59,7 +59,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <?= $this->Html->link(__('Pokemons'), ['controller' => 'Pokemons', 'action' => 'index'], ['class' => "nav-link"]) ?>
+                    <?= $this->Html->link(__('Pokemons'), ['controller' => '/', 'action' => 'index'], ['class' => "nav-link"]) ?>
                 </li>
             </ul>
         </div>
