@@ -8570,6 +8570,25 @@ td {
 
     }
 }
+@media only screen and (max-width: 640px) {
+    .card2 {
+        width: 220px;
+        height: 150px;
+    }
+    .card3 {
+        width: 220px;
+        height: 150px;
+    }
+    #carousel {
+        height: 250px;
+        margin-left: -35px;
+    }
+
+    #prev, #next {
+        visibility: hidden !important;
+        margin: 0 !important;
+    }
+}
 
 
 

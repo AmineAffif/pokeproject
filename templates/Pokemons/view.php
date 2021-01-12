@@ -9,7 +9,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
-<div class="row">
+<div class="row" style="margin: 0" >
     <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Actions') ?></h4>
@@ -78,7 +78,7 @@
                   </div>
                  </div>
                 </div>
-                <div class="row" style="display: flex; justify-content: center">
+                <div class="row" style="margin: 0; justify-content: center">
                     <div id="carousel">
                         <div class="item">
                             <!--IF HAS FRONT BASIC IMAGE ?-->
@@ -166,11 +166,23 @@
 
     var carousel = new ThreeDCarousel('carousel', 'item');
 
-    var auto = setInterval(function() { carousel.next(); }, 5000);
 
     var next = document.getElementById('next');
     next.onclick = carousel.next.bind(carousel);
 
     var prev = document.getElementById('prev');
     prev.onclick = carousel.prev.bind(carousel);
+
+    // Check window size to change carousel speed
+    function myFunction(x) {
+        if (x.matches) { // If media query matches
+            var auto = setInterval(function() { carousel.next(); }, 2000);
+        } else {
+            var auto = setInterval(function() { carousel.next(); }, 6000);
+        }
+    }
+
+    var x = window.matchMedia("(max-width: 500px)")
+    myFunction(x) // Call listener function at run time
+    x.addListener(myFunction) // Attach listener function on state changes
 </script>

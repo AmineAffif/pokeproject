@@ -1,4 +1,4 @@
-# Projet Web Iut Info module Web 2020
+# Projet Web Pokédex 2020
 
 
 - Groupe N°4
